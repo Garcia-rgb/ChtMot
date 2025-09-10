@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ef4d9ef0-45f7-4bf9-b615-775aeaac9889" name="远端服务器_3090">
+        <fileTransfer rootFolder="/home/package/g2emot" accessType="SFTP" host="connect.nmb2.seetacloud.com" port="14415" sshConfigId="a4e9e716-5fff-461f-828d-20d6756c3519" sshConfig="root@connect.nmb2.seetacloud.com:14415 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

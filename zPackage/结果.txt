@@ -1,0 +1,34 @@
+🔍 主要指标解释：
+指标名	全称	含义
+IDF1	ID F1 Score	ID precision 和 ID recall 的调和平均。越高表示 ID 一致性越好。
+IDP	ID Precision	识别正确 ID 的精度（预测中正确 ID 的占比）。
+IDR	ID Recall	识别正确 ID 的召回率（GT中被正确识别的ID占比）。
+Rcll	Recall	检测召回率：TP / (TP + FN)，表示检测到的目标占所有真实目标的比例。
+Prcn	Precision	检测精度：TP / (TP + FP)，表示预测为目标的中有多少是真正的目标。
+GT	Ground Truth	该视频中的真实目标总数（ID数量）。
+MT	Mostly Tracked	跟踪成功率高于 80% 的 GT ID 数量（ID被很好地跟踪）。
+PT	Partially Tracked	跟踪成功率在 20%-80% 之间的 GT ID 数量。
+ML	Mostly Lost	跟踪成功率低于 20% 的 GT ID 数量（几乎没跟踪上）。
+FP	False Positives	误检：预测出了不该有的目标。
+FN	False Negatives	漏检：没检测出真实目标。
+IDs	Identity Switches	ID切换次数（同一个目标被不同 ID 跟踪）。越低越好。
+FM	Fragmentations	跟踪中断的次数。越低表示跟踪连贯性越好。
+MOTA	Multiple Object Tracking Accuracy	综合指标 = 1 - (FP + FN + IDs) / GT，总体跟踪精度。
+MOTP	Multiple Object Tracking Precision	框的位置精度，越小越好。
+IDt	ID true positives	成功识别的 ID 数量。
+IDa	ID ambiguous matches	模糊匹配（难以区分目标的情况）。
+IDm	ID misses	ID 匹配失败数（未能成功匹配上目标）。
+
+
+2025-06-13 10:32:44 [INFO]: save results to /home/package/g2emot/MOT_dataset/MOT17/images/train/../results/ft_not17_3090_convgs_40/MOT17-13-SDP.txt
+2025-06-13 10:32:44 [INFO]: Evaluate seq: MOT17-13-SDP
+2025-06-13 10:32:44 [INFO]: Time elapsed: 173.70 seconds, FPS: 30.60
+              IDF1   IDP   IDR  Rcll  Prcn  GT  MT  PT ML   FP    FN IDs    FM  MOTA  MOTP IDt IDa IDm
+MOT17-02-SDP 63.4% 75.6% 54.6% 69.8% 96.6%  62  22  31  9  462  5609 193   642 66.3% 0.202 101  43  10
+MOT17-04-SDP 92.1% 93.0% 91.2% 96.2% 98.1%  83  76   5  2  887  1806  68   248 94.2% 0.158  23  29   5
+MOT17-05-SDP 76.2% 86.5% 68.0% 76.5% 97.2% 133  48  69 16  150  1623  69   185 73.4% 0.174  52  36  26
+MOT17-09-SDP 72.4% 80.0% 66.2% 81.8% 98.8%  26  20   6  0   51   970  54    95 79.8% 0.161  27  18   7
+MOT17-10-SDP 72.8% 80.7% 66.3% 78.3% 95.3%  57  29  28  0  497  2788 119   471 73.5% 0.227  46  44   4
+MOT17-11-SDP 89.1% 92.8% 85.6% 89.9% 97.5%  75  53  18  4  218   957  39   149 87.1% 0.157  18  17   6
+MOT17-13-SDP 80.1% 85.7% 75.1% 83.6% 95.4% 110  76  26  8  468  1912  87   366 78.8% 0.221  48  32  26
+OVERALL      82.3% 87.7% 77.6% 86.1% 97.2% 546 324 183 39 2733 15665 629  2156 83.1% 0.178 315 219  84
